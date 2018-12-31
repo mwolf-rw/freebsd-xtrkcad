@@ -1,25 +1,15 @@
 # $FreeBSD$
 
 PORTNAME=	xtrkcad
-DISTVERSION=	5.1.2
-DISTVERSIONPREFIX=	source-
-DISTVERSIONSUFFIX=	a
+PORTVERSION=	5.1.2.a
 CATEGORIES=	cad
 MASTER_SITES=	SF/xtrkcad-fork/XTrackCad/Version%20${DISTVERSION}
+DISTNAME=	${PORTNAME}-source-5.1.2a
 
 MAINTAINER=	freebsd@rheinwolf.de
 COMMENT=	XTrackCAD is a CAD program for designing model railroad layouts
 
 LICENSE=	GPLv2
-
-OPTIONS_DEFINE=	DOCS EXAMPLES NLS
-OPTIONS_SUB=	NLS
-
-DOCS_BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
-
-NLS_VARS=	USES+=gettext-runtime:lib \
-		USES+=gettext-tools:build
-NLS_CMAKE_ON=	XTRKCAD_USE_GETTEXT
 
 LIB_DEPENDS=	libcmocka.so:sysutils/cmocka \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -30,8 +20,17 @@ BUILD_DEPENDS=	pkg-config:devel/pkgconf
 
 USES=		cmake gnome
 USE_GNOME=	gdkpixbuf2 gtk20 cairo
+
 CMAKE_ON=	XTRKCAD_USE_GTK
 CMAKE_OFF=	XTRKCAD_TESTING
+
+OPTIONS_DEFINE=	DOCS EXAMPLES NLS
+OPTIONS_SUB=	NLS
+
+DOCS_BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
+
+NLS_USES=	gettext-runtime:lib gettext-tools:build
+NLS_CMAKE_ON=	XTRKCAD_USE_GETTEXT
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DESKTOPDIR} \
@@ -41,8 +40,12 @@ post-install:
 	${RM} ${STAGEDIR}${DATADIR}/COPYING
 	${MV} ${STAGEDIR}/usr/share/applications/xtrkcad.desktop ${STAGEDIR}${DESKTOPDIR}
 	${MV} ${STAGEDIR}/usr/share/pixmaps/xtrkcad.png ${STAGEDIR}${PREFIX}/share/pixmaps
+
+post-install-DOCS-on:
 	${MV} ${STAGEDIR}${DATADIR}/CHANGELOG.txt ${STAGEDIR}${DOCSDIR}
 	${MV} ${STAGEDIR}${DATADIR}/Readme.txt ${STAGEDIR}${DOCSDIR}
+
+post-install-EXAMPLES-on:
 	${MV} ${STAGEDIR}${DATADIR}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
