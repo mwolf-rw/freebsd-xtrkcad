@@ -4,7 +4,7 @@ PORTNAME=	xtrkcad
 DISTVERSIONPREFIX=	source-
 DISTVERSION=	5.1.2a
 CATEGORIES=	cad
-MASTER_SITES=	SF/xtrkcad-fork/XTrackCad/Version%20${DISTVERSION}
+MASTER_SITES=	SF/xtrkcad-fork/XTrackCad/Version%20${DISTVERSION:C/[:alpha:]//}
 
 MAINTAINER=	freebsd@rheinwolf.de
 COMMENT=	CAD program for designing model railroad layouts
