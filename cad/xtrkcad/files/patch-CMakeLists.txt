@@ -1,0 +1,18 @@
+--- CMakeLists.txt.orig	2021-01-02 17:52:59 UTC
++++ CMakeLists.txt
+@@ -145,13 +145,13 @@ IF(XTRKCAD_USE_GETTEXT)
+ 			endif(INTL_PATH)
+ 		endif()
+ 	ENDIF(WIN32)
+-	iF(APPLE)
++	#iF(APPLE)
+ 		find_path ( INTL_PATH libintl.h )
+ 		if(INTL_PATH)
+ 			message( STATUS "Use installed gettext module" )
+ 			INCLUDE_DIRECTORIES(${INTL_PATH})
+ 		endif(INTL_PATH)
+-	ENDIF(APPLE)
++	#ENDIF(APPLE)
+ ELSE(XTRKCAD_USE_GETTEXT)
+ 	SET(GENHELP_OPTS "-bh")
+ ENDIF(XTRKCAD_USE_GETTEXT)

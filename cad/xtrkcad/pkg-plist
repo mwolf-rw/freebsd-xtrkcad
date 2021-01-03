@@ -1,9 +1,12 @@
 bin/xtrkcad
 share/applications/xtrkcad.desktop
 share/pixmaps/xtrkcad.png
+%%NLS%%share/locale/cy_GB/LC_MESSAGES/xtrkcad.mo
 %%NLS%%share/locale/de_DE/LC_MESSAGES/xtrkcad.mo
 %%NLS%%share/locale/fi/LC_MESSAGES/xtrkcad.mo
+%%NLS%%share/locale/fr_FR/LC_MESSAGES/xtrkcad.mo
 %%NLS%%share/locale/pt_BR/LC_MESSAGES/xtrkcad.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/xtrkcad.mo
 %%PORTDOCS%%%%DOCSDIR%%/CHANGELOG.txt
 %%PORTDOCS%%%%DOCSDIR%%/Readme.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/2_train_round_mrklnhomde_v1_2014_01.xtc
@@ -46,6 +49,7 @@ share/pixmaps/xtrkcad.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/spagw5.xtc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/stonega.xtc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/timesavr.xtc
+%%DATADIR%%/applications/xtrkcad.xml
 %%DATADIR%%/demos/dmadjend.xtr
 %%DATADIR%%/demos/dmbench.xtr
 %%DATADIR%%/demos/dmcancel.xtr
@@ -93,10 +97,14 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/demos/dmtoyard.xtr
 %%DATADIR%%/demos/dmtrkwid.xtr
 %%DATADIR%%/demos/dmtrntab.xtr
+%%DATADIR%%/html/DescribeCompound.html
+%%DATADIR%%/html/DescribeTrack.html
+%%DATADIR%%/html/DrawOrigin.html
 %%DATADIR%%/html/EasementsCornu.html
 %%DATADIR%%/html/EasementsSectional.html
 %%DATADIR%%/html/EasementsTraditional.html
 %%DATADIR%%/html/ExportDXF.html
+%%DATADIR%%/html/Flextrack.html
 %%DATADIR%%/html/GNUGPLicense.html
 %%DATADIR%%/html/IndexPage.html
 %%DATADIR%%/html/Linux.html
@@ -109,6 +117,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/MSG_CANNOT_GROUP_TRACK.html
 %%DATADIR%%/html/MSG_CANT_GROUP_BUMPER1.html
 %%DATADIR%%/html/MSG_CANT_MODIFY_FROZEN_TRK.html
+%%DATADIR%%/html/MSG_CANT_MODIFY_MODULE_TRK.html
 %%DATADIR%%/html/MSG_CANT_MOVE_UNDER_TRAIN.html
 %%DATADIR%%/html/MSG_CANT_PASTE.html
 %%DATADIR%%/html/MSG_CANT_PLACE_FROGPOINTS.html
@@ -143,31 +152,42 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/MSG_JOIN_CORNU_SAME.html
 %%DATADIR%%/html/MSG_JOIN_DIFFER_ELEV.html
 %%DATADIR%%/html/MSG_JOIN_EASEMENTS.html
+%%DATADIR%%/html/MSG_JOIN_NOTBEZIERORCORNU.html
 %%DATADIR%%/html/MSG_JOIN_SAME.html
 %%DATADIR%%/html/MSG_JOIN_TURNTABLE.html
 %%DATADIR%%/html/MSG_LARGE_FONT.html
 %%DATADIR%%/html/MSG_LAYER_FREEZE.html
 %%DATADIR%%/html/MSG_LAYER_HIDE.html
+%%DATADIR%%/html/MSG_LAYER_MODULE.html
 %%DATADIR%%/html/MSG_LAYER_SEL_FROZEN.html
+%%DATADIR%%/html/MSG_LAYOUT_LINES_SKIPPED.html
 %%DATADIR%%/html/MSG_MOVE_OUT_OF_BOUNDS.html
 %%DATADIR%%/html/MSG_MOVE_POINTS_AWAY_CLOSE.html
 %%DATADIR%%/html/MSG_MOVE_POINTS_AWAY_NO_INTERSECTION.html
 %%DATADIR%%/html/MSG_MOVE_POINTS_OTHER_SIDE.html
+%%DATADIR%%/html/MSG_NOT_UNFROZEN_LAYER.html
 %%DATADIR%%/html/MSG_NO_CARPROTO.html
 %%DATADIR%%/html/MSG_NO_CARS.html
+%%DATADIR%%/html/MSG_NO_EMPTY_LAYER.html
 %%DATADIR%%/html/MSG_NO_PATH_TO_EP.html
+%%DATADIR%%/html/MSG_NO_PRINTER_SELECTED.html
 %%DATADIR%%/html/MSG_NO_REDO.html
 %%DATADIR%%/html/MSG_NO_ROOM_BTW_TRKS.html
 %%DATADIR%%/html/MSG_NO_SELECTED_TRK.html
 %%DATADIR%%/html/MSG_NO_TURNOUTS_AVAILABLE.html
 %%DATADIR%%/html/MSG_NO_UNCONN_EP.html
 %%DATADIR%%/html/MSG_NO_UNDO.html
+%%DATADIR%%/html/MSG_NO_UNFROZEN_LAYER.html
 %%DATADIR%%/html/MSG_OBJECT_TOO_SHORT.html
 %%DATADIR%%/html/MSG_OUT_OF_BOUNDS.html
 %%DATADIR%%/html/MSG_PARALLEL_SEP_GTR_0.html
+%%DATADIR%%/html/MSG_PARAM_LINES_SKIPPED.html
+%%DATADIR%%/html/MSG_PARAM_UPGRADE_VERSION1.html
+%%DATADIR%%/html/MSG_PARAM_UPGRADE_VERSION2.html
 %%DATADIR%%/html/MSG_PLAYBACK_LISTENTRY.html
 %%DATADIR%%/html/MSG_PLAYBACK_VERSION_UPGRADE.html
 %%DATADIR%%/html/MSG_POINT_INSIDE_TURNTABLE.html
+%%DATADIR%%/html/MSG_POLY_MULTIPLE_SELECTED.html
 %%DATADIR%%/html/MSG_POLY_SHAPES_3_SIDES.html
 %%DATADIR%%/html/MSG_PRINT_MAX_SIZE.html
 %%DATADIR%%/html/MSG_PRINT_NO_PAGES.html
@@ -190,6 +210,8 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/MSG_SPLIT_PATH_NOT_UNIQUE.html
 %%DATADIR%%/html/MSG_SPLIT_POS_BTW_MERGEPTS.html
 %%DATADIR%%/html/MSG_STRUCT_NO_STRUCTS.html
+%%DATADIR%%/html/MSG_TEXT_TOO_LONG.html
+%%DATADIR%%/html/MSG_TODSGN_CORNU_TOO_COMPLEX.html
 %%DATADIR%%/html/MSG_TODSGN_CROSSOVER_TOO_SHORT.html
 %%DATADIR%%/html/MSG_TODSGN_DESC_NONBLANK.html
 %%DATADIR%%/html/MSG_TODSGN_REPLACE.html
@@ -197,6 +219,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/MSG_TOOMANYSEGSINGROUP.html
 %%DATADIR%%/html/MSG_TOO_FAR_APART_DIVERGE.html
 %%DATADIR%%/html/MSG_TRK_ALREADY_CONN.html
+%%DATADIR%%/html/MSG_TRK_DESC_NOT_VISIBLE.html
 %%DATADIR%%/html/MSG_TRK_TOO_SHORT.html
 %%DATADIR%%/html/MSG_TURNOUT_NO_TURNOUT.html
 %%DATADIR%%/html/MSG_TURNTABLE_DIAM_GTR_0.html
@@ -207,6 +230,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/MSWinInstall.html
 %%DATADIR%%/html/MessagesandExplanations.html
 %%DATADIR%%/html/NoteDialog.html
+%%DATADIR%%/html/OSXInstall.html
 %%DATADIR%%/html/aboutmanual.html
 %%DATADIR%%/html/addFeatures.html
 %%DATADIR%%/html/addM.html
@@ -219,40 +243,76 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/changeM.html
 %%DATADIR%%/html/chgBezier.html
 %%DATADIR%%/html/chgCornu.html
+%%DATADIR%%/html/chgDraw.html
 %%DATADIR%%/html/chgTrackLength.html
 %%DATADIR%%/html/chgTrackRadius.html
 %%DATADIR%%/html/clrElev.html
 %%DATADIR%%/html/cmdAboveBelow.html
 %%DATADIR%%/html/cmdAcclKeys.html
 %%DATADIR%%/html/cmdAdd.html
+%%DATADIR%%/html/cmdAngle.html
+%%DATADIR%%/html/cmdBezier.html
 %%DATADIR%%/html/cmdBlock.html
+%%DATADIR%%/html/cmdBridge.html
 %%DATADIR%%/html/cmdCarinv.html
 %%DATADIR%%/html/cmdCarpart.html
 %%DATADIR%%/html/cmdChange.html
 %%DATADIR%%/html/cmdCircle.html
-%%DATADIR%%/html/cmdCircleL.html
+%%DATADIR%%/html/cmdCircleCenter.html
+%%DATADIR%%/html/cmdCircleFixedRadius.html
+%%DATADIR%%/html/cmdCircleTangent.html
 %%DATADIR%%/html/cmdCmdopt.html
 %%DATADIR%%/html/cmdConnect.html
 %%DATADIR%%/html/cmdContmgm.html
 %%DATADIR%%/html/cmdControl.html
+%%DATADIR%%/html/cmdConvert.html
+%%DATADIR%%/html/cmdConvertFrom.html
+%%DATADIR%%/html/cmdConvertTo.html
+%%DATADIR%%/html/cmdCornu.html
 %%DATADIR%%/html/cmdCurve.html
-%%DATADIR%%/html/cmdCurvedL.html
+%%DATADIR%%/html/cmdCurveCenter.html
+%%DATADIR%%/html/cmdCurveChord.html
+%%DATADIR%%/html/cmdCurveEndPt.html
+%%DATADIR%%/html/cmdCurveTangent.html
 %%DATADIR%%/html/cmdCustmgm.html
 %%DATADIR%%/html/cmdDelete.html
 %%DATADIR%%/html/cmdDemo.html
 %%DATADIR%%/html/cmdDescribe.html
 %%DATADIR%%/html/cmdDisplay.html
 %%DATADIR%%/html/cmdDraw.html
+%%DATADIR%%/html/cmdDrawBench.html
+%%DATADIR%%/html/cmdDrawBezierCurve.html
+%%DATADIR%%/html/cmdDrawBox.html
 %%DATADIR%%/html/cmdDrawCircle.html
+%%DATADIR%%/html/cmdDrawCircleCenter.html
+%%DATADIR%%/html/cmdDrawCircleTangent.html
+%%DATADIR%%/html/cmdDrawCircles.html
 %%DATADIR%%/html/cmdDrawCurve.html
+%%DATADIR%%/html/cmdDrawCurveCenter.html
+%%DATADIR%%/html/cmdDrawCurveChord.html
+%%DATADIR%%/html/cmdDrawCurveEndPt.html
+%%DATADIR%%/html/cmdDrawCurveTangent.html
+%%DATADIR%%/html/cmdDrawCurves.html
+%%DATADIR%%/html/cmdDrawDimLine.html
+%%DATADIR%%/html/cmdDrawFilledBox.html
+%%DATADIR%%/html/cmdDrawFilledCircleCenter.html
+%%DATADIR%%/html/cmdDrawFilledCircleTangent.html
+%%DATADIR%%/html/cmdDrawFilledPolygon.html
+%%DATADIR%%/html/cmdDrawLine.html
+%%DATADIR%%/html/cmdDrawPolygon.html
+%%DATADIR%%/html/cmdDrawPolyline.html
 %%DATADIR%%/html/cmdDrawShape.html
+%%DATADIR%%/html/cmdDrawShapes.html
 %%DATADIR%%/html/cmdDrawStraight.html
+%%DATADIR%%/html/cmdDrawStraights.html
+%%DATADIR%%/html/cmdDrawTableEdge.html
 %%DATADIR%%/html/cmdEasement.html
 %%DATADIR%%/html/cmdEdit.html
-%%DATADIR%%/html/cmdElev.html
+%%DATADIR%%/html/cmdElevation.html
 %%DATADIR%%/html/cmdEnum.html
 %%DATADIR%%/html/cmdExport.html
 %%DATADIR%%/html/cmdFile.html
+%%DATADIR%%/html/cmdFileNote.html
 %%DATADIR%%/html/cmdFlip.html
 %%DATADIR%%/html/cmdGrid.html
 %%DATADIR%%/html/cmdGroup.html
@@ -261,9 +321,13 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/cmdHotBar.html
 %%DATADIR%%/html/cmdImport.html
 %%DATADIR%%/html/cmdJoin.html
+%%DATADIR%%/html/cmdJoinLine.html
+%%DATADIR%%/html/cmdJoinTrack.html
 %%DATADIR%%/html/cmdLayer.html
 %%DATADIR%%/html/cmdLayout.html
+%%DATADIR%%/html/cmdLinkNote.html
 %%DATADIR%%/html/cmdMacro.html
+%%DATADIR%%/html/cmdMagneticSnap.html
 %%DATADIR%%/html/cmdManage.html
 %%DATADIR%%/html/cmdMap.html
 %%DATADIR%%/html/cmdModify.html
@@ -274,9 +338,12 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/cmdOutputbitmap.html
 %%DATADIR%%/html/cmdPan.html
 %%DATADIR%%/html/cmdParallel.html
+%%DATADIR%%/html/cmdParallelLine.html
+%%DATADIR%%/html/cmdParallelTrack.html
 %%DATADIR%%/html/cmdPref.html
 %%DATADIR%%/html/cmdPricelist.html
 %%DATADIR%%/html/cmdPrint.html
+%%DATADIR%%/html/cmdPrintMargin.html
 %%DATADIR%%/html/cmdPrmfile.html
 %%DATADIR%%/html/cmdProfile.html
 %%DATADIR%%/html/cmdRaiseElev.html
@@ -285,19 +352,23 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/cmdRgbcolor.html
 %%DATADIR%%/html/cmdRotate.html
 %%DATADIR%%/html/cmdRuler.html
+%%DATADIR%%/html/cmdSearchgui.html
 %%DATADIR%%/html/cmdSelect.html
 %%DATADIR%%/html/cmdSensor.html
-%%DATADIR%%/html/cmdShapes.html
 %%DATADIR%%/html/cmdSignal.html
+%%DATADIR%%/html/cmdSplit.html
+%%DATADIR%%/html/cmdSplitDraw.html
 %%DATADIR%%/html/cmdSplitTrack.html
 %%DATADIR%%/html/cmdStatusbar.html
 %%DATADIR%%/html/cmdSticky.html
 %%DATADIR%%/html/cmdStraight.html
-%%DATADIR%%/html/cmdStraightL.html
 %%DATADIR%%/html/cmdStructure.html
 %%DATADIR%%/html/cmdSwitchmotor.html
 %%DATADIR%%/html/cmdText.html
+%%DATADIR%%/html/cmdTextNote.html
+%%DATADIR%%/html/cmdTies.html
 %%DATADIR%%/html/cmdTrain.html
+%%DATADIR%%/html/cmdTrimDraw.html
 %%DATADIR%%/html/cmdTunnel.html
 %%DATADIR%%/html/cmdTurnout.html
 %%DATADIR%%/html/cmdTurnoutNew.html
@@ -312,15 +383,24 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/contents.html
 %%DATADIR%%/html/controlElementScripts.html
 %%DATADIR%%/html/copydist.html
+%%DATADIR%%/html/cornuTrackPins.html
 %%DATADIR%%/html/createTangent.html
 %%DATADIR%%/html/dirOverview.html
 %%DATADIR%%/html/directories.html
+%%DATADIR%%/html/drawDescribe.html
+%%DATADIR%%/html/drawDescribeBench.html
+%%DATADIR%%/html/drawDescribeCommon.html
+%%DATADIR%%/html/drawDescribeCurve.html
+%%DATADIR%%/html/drawDescribeDim.html
+%%DATADIR%%/html/drawDescribePoly.html
+%%DATADIR%%/html/drawDescribeStr.html
+%%DATADIR%%/html/drawDescribeText.html
 %%DATADIR%%/html/editM.html
 %%DATADIR%%/html/enhancements.html
 %%DATADIR%%/html/enterValue.html
+%%DATADIR%%/html/extendModify.html
 %%DATADIR%%/html/extendTrack.html
 %%DATADIR%%/html/faqs.html
-%%DATADIR%%/html/faqsButtonColor.html
 %%DATADIR%%/html/faqsHotBar.html
 %%DATADIR%%/html/faqsJoin.html
 %%DATADIR%%/html/faqsPrototype.html
@@ -339,7 +419,6 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/introQT.html
 %%DATADIR%%/html/joinCornu.html
 %%DATADIR%%/html/joinNormalEasment.html
-%%DATADIR%%/html/joinTrackCurve.html
 %%DATADIR%%/html/joinTrackMove.html
 %%DATADIR%%/html/joinTrackStraight.html
 %%DATADIR%%/html/kbshortcutHotBar.html
@@ -356,9 +435,11 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/moveByMenu.html
 %%DATADIR%%/html/moveByMouse.html
 %%DATADIR%%/html/navigation.html
+%%DATADIR%%/html/objectModify.html
 %%DATADIR%%/html/optionM.html
 %%DATADIR%%/html/performance.html
 %%DATADIR%%/html/png.d/ahelix.png
+%%DATADIR%%/html/png.d/bangle.png
 %%DATADIR%%/html/png.d/bblock.png
 %%DATADIR%%/html/png.d/bcircl1.png
 %%DATADIR%%/html/png.d/bcircl2.png
@@ -366,6 +447,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/bcircle.png
 %%DATADIR%%/html/png.d/bconnect.png
 %%DATADIR%%/html/png.d/bcontrol.png
+%%DATADIR%%/html/png.d/bcornu.png
 %%DATADIR%%/html/png.d/bcurve.png
 %%DATADIR%%/html/png.d/bcurve1.png
 %%DATADIR%%/html/png.d/bcurve2.png
@@ -377,6 +459,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/beasement.png
 %%DATADIR%%/html/png.d/belev.png
 %%DATADIR%%/html/png.d/bezier.png
+%%DATADIR%%/html/png.d/bfile.png
 %%DATADIR%%/html/png.d/bflip.png
 %%DATADIR%%/html/png.d/bgsnap.png
 %%DATADIR%%/html/png.d/bgundo.png
@@ -385,7 +468,9 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/bhndldto.png
 %%DATADIR%%/html/png.d/bitmap.png
 %%DATADIR%%/html/png.d/bjoin.png
+%%DATADIR%%/html/png.d/bjoinline.png
 %%DATADIR%%/html/png.d/blayer.png
+%%DATADIR%%/html/png.d/blink.png
 %%DATADIR%%/html/png.d/block.png
 %%DATADIR%%/html/png.d/blockBoth.png
 %%DATADIR%%/html/png.d/blockBottom.png
@@ -402,7 +487,8 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/bnewcar.png
 %%DATADIR%%/html/png.d/bnote.png
 %%DATADIR%%/html/png.d/bopen.png
-%%DATADIR%%/html/png.d/bparalle.png
+%%DATADIR%%/html/png.d/bparallel.png
+%%DATADIR%%/html/png.d/bparalleline.png
 %%DATADIR%%/html/png.d/brotate.png
 %%DATADIR%%/html/png.d/bruler.png
 %%DATADIR%%/html/png.d/bsave.png
@@ -430,6 +516,9 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/cmdopt.png
 %%DATADIR%%/html/png.d/colorw.png
 %%DATADIR%%/html/png.d/control.png
+%%DATADIR%%/html/png.d/convertfrom.png
+%%DATADIR%%/html/png.d/convertto.png
+%%DATADIR%%/html/png.d/cornuendanchor.png
 %%DATADIR%%/html/png.d/custmgm.png
 %%DATADIR%%/html/png.d/dbench.png
 %%DATADIR%%/html/png.d/dbezier.png
@@ -469,8 +558,14 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/flip3.png
 %%DATADIR%%/html/png.d/flip4.png
 %%DATADIR%%/html/png.d/fonts.png
+%%DATADIR%%/html/png.d/greendot.png
+%%DATADIR%%/html/png.d/greenstar.png
+%%DATADIR%%/html/png.d/greydot.png
+%%DATADIR%%/html/png.d/greystar.png
 %%DATADIR%%/html/png.d/grid.png
 %%DATADIR%%/html/png.d/hotbar.png
+%%DATADIR%%/html/png.d/iconfile.png
+%%DATADIR%%/html/png.d/iconlink.PNG
 %%DATADIR%%/html/png.d/iconnote.png
 %%DATADIR%%/html/png.d/import.png
 %%DATADIR%%/html/png.d/joincornu1.png
@@ -496,6 +591,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/main.png
 %%DATADIR%%/html/png.d/main1.png
 %%DATADIR%%/html/png.d/maincanvas.png
+%%DATADIR%%/html/png.d/maintagged.png
 %%DATADIR%%/html/png.d/map.png
 %%DATADIR%%/html/png.d/mchange.png
 %%DATADIR%%/html/png.d/mdraw.png
@@ -513,13 +609,14 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/mmacro.png
 %%DATADIR%%/html/png.d/mmanage.png
 %%DATADIR%%/html/png.d/mmanageturnoutdesign.png
-%%DATADIR%%/html/png.d/mmovedraw.png
+%%DATADIR%%/html/png.d/mnote.png
 %%DATADIR%%/html/png.d/moptions.png
 %%DATADIR%%/html/png.d/mrotatealign.png
 %%DATADIR%%/html/png.d/mrotatefixed.png
 %%DATADIR%%/html/png.d/mrotatemove.png
-%%DATADIR%%/html/png.d/mselect.png
-%%DATADIR%%/html/png.d/mselected.png
+%%DATADIR%%/html/png.d/mselectcmd.png
+%%DATADIR%%/html/png.d/mselectcontext.png
+%%DATADIR%%/html/png.d/mselectedcontext.png
 %%DATADIR%%/html/png.d/msplitblock.png
 %%DATADIR%%/html/png.d/msplitblockLR.png
 %%DATADIR%%/html/png.d/mtoolbar.png
@@ -527,22 +624,29 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/mview.png
 %%DATADIR%%/html/png.d/mwindow.png
 %%DATADIR%%/html/png.d/mzoomscale.png
+%%DATADIR%%/html/png.d/notefile.png
+%%DATADIR%%/html/png.d/notelink.png
+%%DATADIR%%/html/png.d/notetext.png
 %%DATADIR%%/html/png.d/openwindows.png
 %%DATADIR%%/html/png.d/pan.png
+%%DATADIR%%/html/png.d/paramsearch.png
 %%DATADIR%%/html/png.d/partslist.png
 %%DATADIR%%/html/png.d/pref.png
 %%DATADIR%%/html/png.d/pricelist.png
 %%DATADIR%%/html/png.d/print.png
+%%DATADIR%%/html/png.d/printmargin.png
 %%DATADIR%%/html/png.d/printset.png
 %%DATADIR%%/html/png.d/printset_win.png
+%%DATADIR%%/html/png.d/reddot.png
+%%DATADIR%%/html/png.d/redstar.png
 %%DATADIR%%/html/png.d/rescale.png
-%%DATADIR%%/html/png.d/satusbarparallel.png
 %%DATADIR%%/html/png.d/sensor.png
 %%DATADIR%%/html/png.d/signal.png
 %%DATADIR%%/html/png.d/splitConnect.png
 %%DATADIR%%/html/png.d/splitDisconnect.png
 %%DATADIR%%/html/png.d/splitNotYet.png
 %%DATADIR%%/html/png.d/statusbar.png
+%%DATADIR%%/html/png.d/statusbarparallel.png
 %%DATADIR%%/html/png.d/statusbartrain.png
 %%DATADIR%%/html/png.d/statusbarturntable.png
 %%DATADIR%%/html/png.d/statustext.png
@@ -558,6 +662,9 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/png.d/turnsel.png
 %%DATADIR%%/html/png.d/updttl.png
 %%DATADIR%%/html/png.d/xtrkcad_logo.gif
+%%DATADIR%%/html/png.d/yellowdot.png
+%%DATADIR%%/html/png.d/yellowstar.png
+%%DATADIR%%/html/polyModify.html
 %%DATADIR%%/html/printSetup.html
 %%DATADIR%%/html/rotateByAlign.html
 %%DATADIR%%/html/rotateByMenu.html
@@ -566,11 +673,18 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/html/splitDisconnect.html
 %%DATADIR%%/html/splitDivide.html
 %%DATADIR%%/html/startSoftware.html
+%%DATADIR%%/html/support.html
 %%DATADIR%%/html/toolbarM.html
+%%DATADIR%%/html/trackDescribeBezier.html
+%%DATADIR%%/html/trackDescribeCommon.html
+%%DATADIR%%/html/trackDescribeCornu.html
+%%DATADIR%%/html/trackDescribeCurve.html
+%%DATADIR%%/html/trackDescribeStr.html
 %%DATADIR%%/html/uninstall.html
 %%DATADIR%%/html/upgrades.html
 %%DATADIR%%/html/v4.0.3_revisions.html
 %%DATADIR%%/html/v4.0.x_revisions.html
+%%DATADIR%%/html/v5.html
 %%DATADIR%%/html/viewM.html
 %%DATADIR%%/html/warranty.html
 %%DATADIR%%/html/warrantyLicenseCopy.html
@@ -583,13 +697,16 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/ACG19.350 Track.xtp
 %%DATADIR%%/params/ACG20.000 Track.xtp
 %%DATADIR%%/params/ACG20.000_Track.xtp
+%%DATADIR%%/params/Any-AtlasControllers.xtp
 %%DATADIR%%/params/Any-CTC_panel.xtp
 %%DATADIR%%/params/Any-CabooseIndustries.xtp
 %%DATADIR%%/params/Any-ElecSymbol.xtp
+%%DATADIR%%/params/Any-MTB Switch Machines.xtp
 %%DATADIR%%/params/AtlasTrueTrk.xtp
 %%DATADIR%%/params/Azatrax.xtp
 %%DATADIR%%/params/BachmannEZ-HO.xtp
 %%DATADIR%%/params/BachmannEZ-N.xtp
+%%DATADIR%%/params/BrioWoodTrack.xtp
 %%DATADIR%%/params/Central Valley turnout kits.xtp
 %%DATADIR%%/params/Central Valley turnouts.xtp
 %%DATADIR%%/params/Circuits.xtp
@@ -598,18 +715,27 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/F-NMRA-RP12-21.xtp
 %%DATADIR%%/params/FastTrack-HO.xtp
 %%DATADIR%%/params/FastTrack_n.xtp
+%%DATADIR%%/params/Fn3-NMRA-RP12-23.xtp
+%%DATADIR%%/params/G-MicroEngineeringTrack.xtp
 %%DATADIR%%/params/G-NMRA-RP12-23.xtp
 %%DATADIR%%/params/G-NQD-AMAX Plastic.xtp
+%%DATADIR%%/params/G-Peco G45 Track.xtp
 %%DATADIR%%/params/G-aristo.xtp
 %%DATADIR%%/params/Gn15-nmra.xtp
-%%DATADIR%%/params/H0_ncb-Roads.xtp
+%%DATADIR%%/params/Gn3-aristo.xtp
 %%DATADIR%%/params/HO-AtlasHOstruct.xtp
+%%DATADIR%%/params/HO-CentralValley Bridges.xtp
 %%DATADIR%%/params/HO-DapolHOOO.xtp
+%%DATADIR%%/params/HO-EndoRailwayTrackSystem.xtp
 %%DATADIR%%/params/HO-Frateschi.xtp
 %%DATADIR%%/params/HO-HornbyHO.xtp
 %%DATADIR%%/params/HO-LifeLike-Power-Loc.xtp
+%%DATADIR%%/params/HO-Marklin C-Track.xtp
+%%DATADIR%%/params/HO-Marklin K-track.xtp
+%%DATADIR%%/params/HO-Marklin M-Track.xtp
 %%DATADIR%%/params/HO-Mehano.xtp
 %%DATADIR%%/params/HO-MetcalfeHOOO.xtp
+%%DATADIR%%/params/HO-MicroEngineering-Bridges.xtp
 %%DATADIR%%/params/HO-MicroEngineering.xtp
 %%DATADIR%%/params/HO-OldJouefHO100.xtp
 %%DATADIR%%/params/HO-Peco-Code100Setrack.xtp
@@ -618,19 +744,23 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/HO-Peco-Code83.xtp
 %%DATADIR%%/params/HO-Peco70USA.xtp
 %%DATADIR%%/params/HO-RatioHOOO.xtp
+%%DATADIR%%/params/HO-Roco HO Code 83.xtp
 %%DATADIR%%/params/HO-Slot-Car-AFX-Track.xtp
 %%DATADIR%%/params/HO-Slot-Car-Adapter-Track.xtp
 %%DATADIR%%/params/HO-Slot-Car-Aurora-Track-Manually-Modified.xtp
 %%DATADIR%%/params/HO-Slot-Car-Aurora-Track.xtp
 %%DATADIR%%/params/HO-Slot-Cars.xtp
 %%DATADIR%%/params/HO-Superquick.xtp
+%%DATADIR%%/params/HO-Tillig Luna Tramway.xtp
 %%DATADIR%%/params/HO-WalthCornerstone 1.xtp
+%%DATADIR%%/params/HO-Walthers Cornerstone Engineered Bridge System.xtp
 %%DATADIR%%/params/HO-Weinert-Code75.xtp
 %%DATADIR%%/params/HO-WillsHOOO.xtp
 %%DATADIR%%/params/HO-atl100ho.xtp
 %%DATADIR%%/params/HO-cmr-ho.xtp
 %%DATADIR%%/params/HO_toolkit-Roads.xtp
 %%DATADIR%%/params/HOn3-BlackStoneProTraxx.xtp
+%%DATADIR%%/params/HOn3-MicroEngineering-Bridges.xtp
 %%DATADIR%%/params/HOn3-MicroEngineering.xtp
 %%DATADIR%%/params/HOn30_Minitrains.xtp
 %%DATADIR%%/params/Hornby Dublo 2 Rail Buildings.xtp
@@ -638,11 +768,9 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/Hornby Dublo 3 Rail with Turntable.xtp
 %%DATADIR%%/params/Hornby Dublo Signals.xtp
 %%DATADIR%%/params/Hornby Dublo Wood Buildings.xtp
-%%DATADIR%%/params/HornbyOO.xtp
 %%DATADIR%%/params/JouefHO.xtp
 %%DATADIR%%/params/K-Line  O Structures (Kits).xtp
 %%DATADIR%%/params/Lego-Track.xtp
-%%DATADIR%%/params/LifeLike-N.xtp
 %%DATADIR%%/params/LimaHO.xtp
 %%DATADIR%%/params/Lionel  O Misc.xtp
 %%DATADIR%%/params/Lionel  O Operating Structures.xtp
@@ -654,6 +782,7 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/Lionel_Marx Beacons & Floodlight Towers.xtp
 %%DATADIR%%/params/Lionel_Marx Highway Signals & Blocks.xtp
 %%DATADIR%%/params/Marx.xtp
+%%DATADIR%%/params/N-AtlasRoco Code80 Track.xtp
 %%DATADIR%%/params/N-AtlasTrueTrack.xtp
 %%DATADIR%%/params/N-BRIDGES.xtp
 %%DATADIR%%/params/N-Bonus Commercial Structures.xtp
@@ -663,37 +792,48 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/N-Bonus Residential Structures.xtp
 %%DATADIR%%/params/N-Bonus Structures.xtp
 %%DATADIR%%/params/N-BritishFinescaleFineTraxC40.xtp
+%%DATADIR%%/params/N-CentralValley Bridges.xtp
 %%DATADIR%%/params/N-DESIGN-PRESERVATION.xtp
 %%DATADIR%%/params/N-GRAIN-ELEVATORS.xtp
 %%DATADIR%%/params/N-Greenmax-Engine sheds.xtp
 %%DATADIR%%/params/N-Greenmax-Island platform 16.xtp
 %%DATADIR%%/params/N-Ibertren.xtp
+%%DATADIR%%/params/N-Kato Track and Structures.xtp
 %%DATADIR%%/params/N-Kato-Unitram.xtp
 %%DATADIR%%/params/N-Katocn.xtp
 %%DATADIR%%/params/N-LifeLike Power-Loc.xtp
 %%DATADIR%%/params/N-ME Structures.xtp
 %%DATADIR%%/params/N-MOBILE-HOMES.xtp
+%%DATADIR%%/params/N-MicroEngineering-Bridges.xtp
 %%DATADIR%%/params/N-N- 90ft-ROUNDHOUSE.xtp
 %%DATADIR%%/params/N-NScaleArchitect.xtp
+%%DATADIR%%/params/N-NTram Track.xtp
 %%DATADIR%%/params/N-NULINE.xtp
 %%DATADIR%%/params/N-PecoCode55Finescale.xtp
 %%DATADIR%%/params/N-PecoCode80Setrack.xtp
 %%DATADIR%%/params/N-PecoCode80Streamline.xtp
 %%DATADIR%%/params/N-Rix-Pikestuff.xtp
+%%DATADIR%%/params/N-ScaleScene Structures.xtp
 %%DATADIR%%/params/N-Shinohara70.xtp
+%%DATADIR%%/params/N-Tomix Track.xtp
 %%DATADIR%%/params/N-atlasn55.xtp
+%%DATADIR%%/params/N-atlasn80.xtp
 %%DATADIR%%/params/N-cmr.xtp
 %%DATADIR%%/params/N-fl.xtp
-%%DATADIR%%/params/N-kato-n-gl-trk.xtp
 %%DATADIR%%/params/N-kato-turntable.xtp
-%%DATADIR%%/params/N-kato.xtp
 %%DATADIR%%/params/N-me.xtp
 %%DATADIR%%/params/N-walth-n.xtp
 %%DATADIR%%/params/NJI.xtp
 %%DATADIR%%/params/NScale_SectorPlate_Traverser_Examples.xtp
+%%DATADIR%%/params/Newqida.xtp
 %%DATADIR%%/params/Ninco_SCX Slot Car.xtp
 %%DATADIR%%/params/Nm-NTram.xtp
 %%DATADIR%%/params/Nn3-FastTrack.xtp
+%%DATADIR%%/params/O-Atlas2Rail.xtp
+%%DATADIR%%/params/O-Atlas2RailObsolete.xtp
+%%DATADIR%%/params/O-Atlas3Rail Roadbed.xtp
+%%DATADIR%%/params/O-Atlas3Rrail.xtp
+%%DATADIR%%/params/O-AtlasIndustrial3Rail.xtp
 %%DATADIR%%/params/O-Bassett-Lowke (discontinued).xtp
 %%DATADIR%%/params/O-ETS TramTrack.xtp
 %%DATADIR%%/params/O-ETS.xtp
@@ -703,10 +843,13 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/O-Ross.xtp
 %%DATADIR%%/params/O-atlaso3rail.xtp
 %%DATADIR%%/params/O-nmra-lapped.xtp
+%%DATADIR%%/params/OO9-Peco.xtp
 %%DATADIR%%/params/On14mm KBScale.xtp
+%%DATADIR%%/params/On3-FastTrack.xtp
 %%DATADIR%%/params/On30-FastTrack.xtp
 %%DATADIR%%/params/On30-Guy.xtp
 %%DATADIR%%/params/On30-Interfaceplates.xtp
+%%DATADIR%%/params/On30-MicroEngineering.xtp
 %%DATADIR%%/params/On30.xtp
 %%DATADIR%%/params/Peco-On30.xtp
 %%DATADIR%%/params/Piko-A.xtp
@@ -714,8 +857,10 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/ProZ-Track.xtp
 %%DATADIR%%/params/Proto-AmSlotCar.xtp
 %%DATADIR%%/params/RSLaserKits.xtp
+%%DATADIR%%/params/RemcoMightyCasey.xtp
 %%DATADIR%%/params/RocoGeoLineHO.xtp
 %%DATADIR%%/params/S-AmericanModel.xtp
+%%DATADIR%%/params/S-Lionel AF Fastrack.xtp
 %%DATADIR%%/params/S-MTH S-Trax.xtp
 %%DATADIR%%/params/S-SHelper S-Trax.xtp
 %%DATADIR%%/params/S-Trax.xtp
@@ -737,8 +882,11 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/USA-G.xtp
 %%DATADIR%%/params/Woodland.xtp
 %%DATADIR%%/params/Z-Atlas55.xtp
+%%DATADIR%%/params/Z-Eisen Platz Track.xtp
 %%DATADIR%%/params/Z-Fasttrack.xtp
 %%DATADIR%%/params/Z-Peco60.xtp
+%%DATADIR%%/params/Z-Prim Track.xtp
+%%DATADIR%%/params/Z-RealZJ Track.xtp
 %%DATADIR%%/params/Z-Rokuhan.xtp
 %%DATADIR%%/params/Z-T-Trak.xtp
 %%DATADIR%%/params/accurail.xtp
@@ -749,7 +897,6 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/atlascn.xtp
 %%DATADIR%%/params/atlaseho.xtp
 %%DATADIR%%/params/atlasen.xtp
-%%DATADIR%%/params/atlasn.xtp
 %%DATADIR%%/params/atlaso2rail.xtp
 %%DATADIR%%/params/bach-n.xtp
 %%DATADIR%%/params/br.xtp
@@ -773,26 +920,20 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/ho-jlinn.xtp
 %%DATADIR%%/params/ho-ncb-roads.xtp
 %%DATADIR%%/params/hon3-peco.xtp
+%%DATADIR%%/params/hon3cars.xtp
 %%DATADIR%%/params/hornby3r.xtp
 %%DATADIR%%/params/hubner1.xtp
 %%DATADIR%%/params/kato-ho.xtp
-%%DATADIR%%/params/kato-n-DblTrk.xtp
-%%DATADIR%%/params/kato-n.xtp
 %%DATADIR%%/params/lgb.xtp
 %%DATADIR%%/params/marcway-EM.xtp
-%%DATADIR%%/params/me-ho.xtp
 %%DATADIR%%/params/minitrix.xtp
 %%DATADIR%%/params/mp-n.xtp
 %%DATADIR%%/params/mrkholde.xtp
 %%DATADIR%%/params/mrkhomde.xtp
 %%DATADIR%%/params/mrkln1.xtp
 %%DATADIR%%/params/mrklnhoc-de.xtp
-%%DATADIR%%/params/mrklnhoc.xtp
-%%DATADIR%%/params/mrklnhok.xtp
-%%DATADIR%%/params/mrklnhom.xtp
 %%DATADIR%%/params/mrklnz.xtp
 %%DATADIR%%/params/mtl-z.xtp
-%%DATADIR%%/params/nmra-0-lapped.xtp
 %%DATADIR%%/params/nmra-ho.xtp
 %%DATADIR%%/params/nmra-ho3.xtp
 %%DATADIR%%/params/nmra-n.xtp
@@ -807,27 +948,26 @@ share/pixmaps/xtrkcad.png
 %%DATADIR%%/params/pecohom.xtp
 %%DATADIR%%/params/pecohon30.xtp
 %%DATADIR%%/params/pikestuf.xtp
+%%DATADIR%%/params/proto-ng.xtp
 %%DATADIR%%/params/protoam.xtp
 %%DATADIR%%/params/protosteam.xtp
 %%DATADIR%%/params/prototype-de.xtp
 %%DATADIR%%/params/revell.xtp
 %%DATADIR%%/params/rocho100.xtp
-%%DATADIR%%/params/rocho83.xtp
 %%DATADIR%%/params/signals_HO.xtp
 %%DATADIR%%/params/smltown.xtp
 %%DATADIR%%/params/supero.xtp
 %%DATADIR%%/params/t-trak-notes.txt
 %%DATADIR%%/params/t-trak.xtp
 %%DATADIR%%/params/taylor-ho.xtp
-%%DATADIR%%/params/tomix-n.xtp
 %%DATADIR%%/params/toolkit-n.xtp
 %%DATADIR%%/params/tortoise.xtp
 %%DATADIR%%/params/trees.xtp
 %%DATADIR%%/params/walth-bkgrd-ho.xtp
 %%DATADIR%%/params/walth-ho.xtp
-%%DATADIR%%/params/walth-n.xtp
 %%DATADIR%%/params/wlthho10.xtp
 %%DATADIR%%/params/wlthho83.xtp
 %%DATADIR%%/xdg-open
+%%DATADIR%%/xtrkcad-setup
 %%DATADIR%%/xtrkcad.tip
 %%DATADIR%%/xtrkcad.xtq

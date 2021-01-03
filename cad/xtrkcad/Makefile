@@ -1,27 +1,29 @@
 # $FreeBSD$
 
 PORTNAME=	xtrkcad
-DISTVERSIONPREFIX=	source-
-DISTVERSION=	5.1.2a
+PORTVERSION=	5.2.1a
 CATEGORIES=	cad
-MASTER_SITES=	SF/xtrkcad-fork/XTrackCad/Version%20${DISTVERSION:C/[:alpha:]//}
+MASTER_SITES=	https://sourceforge.net/code-snapshots/hg/x/xt/xtrkcad-fork/xtrkcad/
+DISTNAME=	${PORTNAME}-fork-${PORTNAME}-${SF_COMMIT}
 
 MAINTAINER=	freebsd@rheinwolf.de
 COMMENT=	CAD program for designing model railroad layouts
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/app/COPYING
 
-LIB_DEPENDS=	libcmocka.so:sysutils/cmocka \
-		libfontconfig.so:x11-fonts/fontconfig \
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
-		libsoup-2.4.so:devel/libsoup \
-		libwebkitgtk-1.0.so:www/webkit-gtk2
+		libzip.so:archivers/libzip
 BUILD_DEPENDS=	pkg-config:devel/pkgconf
 
-USES=		cmake gnome
+USES=		cmake gnome zip
 USE_GNOME=	gdkpixbuf2 gtk20 cairo
 
-CMAKE_ON=	XTRKCAD_USE_GTK
+SF_COMMIT=	31686443927091c46337f73245750acb05d4e3bb
+
+CMAKE_ARGS=	-Wno-dev
+CMAKE_ON=	XTRKCAD_USE_GTK XTRKCAD_USE_BROWSER
 CMAKE_OFF=	XTRKCAD_TESTING
 
 OPTIONS_DEFINE=	DOCS EXAMPLES NLS
@@ -37,10 +39,9 @@ post-install:
 		 ${STAGEDIR}${DOCSDIR} \
 		 ${STAGEDIR}${EXAMPLESDIR} \
 		 ${STAGEDIR}${PREFIX}/share/pixmaps
-	${MV} ${STAGEDIR}/usr/share/applications/xtrkcad.desktop ${STAGEDIR}${DESKTOPDIR}
-	${MV} ${STAGEDIR}/usr/share/pixmaps/xtrkcad.png ${STAGEDIR}${PREFIX}/share/pixmaps
+	${MV} ${STAGEDIR}${DATADIR}/applications/xtrkcad.desktop ${STAGEDIR}${DESKTOPDIR}
+	${MV} ${STAGEDIR}${DATADIR}/pixmaps/xtrkcad.png ${STAGEDIR}${PREFIX}/share/pixmaps
 	${RM} ${STAGEDIR}${DATADIR}/COPYING
-	${RMDIR} ${STAGEDIR}/usr/share/applications ${STAGEDIR}/usr/share/pixmaps ${STAGEDIR}/usr/share
 
 post-install-DOCS-on:
 	${MV} ${STAGEDIR}${DATADIR}/CHANGELOG.txt ${STAGEDIR}${DOCSDIR}
